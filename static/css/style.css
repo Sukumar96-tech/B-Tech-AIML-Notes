@@ -261,5 +261,113 @@ select{
 .footer p{
     margin: 0;
 }
+/* ========================= */
+/* Mobile Responsive Design  */
+/* ========================= */
+
+@media screen and (max-width:768px){
+
+/* Navbar */
+
+.navbar{
+    flex-direction:column;
+    padding:15px;
+    gap:15px;
+}
+
+.logo a{
+    font-size:32px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.nav-links a{
+    font-size:18px;
+}
+
+/* Container */
+
+.container{
+    width:95%;
+    padding:20px 0;
+}
+
+/* Hero */
+
+.hero{
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+/* Year Cards */
+
+.year-container{
+    grid-template-columns:1fr;
+}
+
+.year-card{
+    padding:25px;
+}
+
+.year-card h2{
+    font-size:22px;
+}
+
+/* Dashboard */
+
+.dashboard-container{
+    grid-template-columns:1fr;
+}
+
+/* Login */
+
+.login-card{
+    width:95%;
+}
+
+/* Notes */
+
+.note-card{
+    padding:15px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+.download-btn,
+.drive-btn{
+    width:100%;
+    text-align:center;
+}
+
+/* Tables */
+
+table{
+    width:100%;
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+/* Footer */
+
+.footer{
+    font-size:14px;
+    padding:15px;
+}
+
+}
 
 
