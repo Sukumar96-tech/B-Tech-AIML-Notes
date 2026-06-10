@@ -198,13 +198,12 @@ def add_note():
 
         title=request.form.get("title")
         drive_link=request.form.get("drive_link")
-        download_link=request.form.get("download_link")
+        
         subject_id=request.form.get("subject_id")
 
         note=Note(
             title=title,
             drive_link=drive_link,
-            download_link=download_link,
             subject_id=subject_id
         )
 
