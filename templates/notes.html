@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Notes
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+    <h1>📚 {{ subject_name }}</h1>
+
+    <p>
+        Select a resource to download or open
+    </p>
+
+</div>
+
+<div class="notes-container">
+
+    {% for note in notes %}
+
+    <div class="note-card">
+
+        <h2>{{ note.title }}</h2>
+
+        <div class="buttons">
+
+            <a href="{{ note.download_link }}" class="download-btn">
+                📄 Download PDF
+            </a>
+
+            <a href="{{ note.drive_link }}" target="_blank" class="drive-btn">
+                🔗 Open Drive
+            </a>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

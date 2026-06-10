@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+Years
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+<h1>📚 Years</h1>
+
+</div>
+
+<table border="1" width="100%" cellpadding="10">
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Action</th>
+
+</tr>
+
+{% for year in years %}
+
+<tr>
+
+<td>
+
+{{year.id}}
+
+</td>
+
+<td>
+
+{{year.name}}
+
+</td>
+
+<td>
+
+<a href="/admin/year/delete/{{year.id}}">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

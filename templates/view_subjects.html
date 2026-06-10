@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}
+Subjects
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+<h1>
+
+📚 Subjects
+
+</h1>
+
+</div>
+
+<table border="1" width="100%" cellpadding="10">
+
+<tr>
+
+<th>ID</th>
+
+<th>Subject</th>
+
+<th>Year</th>
+
+<th>Action</th>
+
+</tr>
+
+{% for subject in subjects %}
+
+<tr>
+
+<td>
+
+{{subject.id}}
+
+</td>
+
+<td>
+
+{{subject.name}}
+
+</td>
+
+<td>
+
+{{subject.year.name}}
+
+</td>
+
+<td>
+
+<a href="/admin/subject/delete/{{subject.id}}">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

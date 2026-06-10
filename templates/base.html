@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}B tech AIML Notes {% endblock %}</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="{{url_for('static',filename="css/style.css")}}">
+    <!--Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <nav class="navbar">
+            <div class="logo"> <a href="/">📚Notes Portal</a></div>
+            <ul class="nav-links">
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+
+            <li>
+                 <a href="{{ url_for('about') }}">About Us</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('contact') }}">Contact Us</a>
+            </li>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content-->
+     <main class="container">
+        {% block content %}
+        {% endblock %}
+
+     </main>
+     <footer class="footer">
+        <!-- java scriopt-->
+         <script src="{{url_for('static',filename='js/script.js')}}"></script>
+         <hr>
+         <p>&copy 2026 B Tech AI&ML Notes Portal. All Rights Reserved</p>
+         <p>Devloped by <a href="https://protfolio-tan-nine.vercel.app/"><strong>Sukumar</strong></a></p>
+     </footer>
+    
+</body>
+</html>

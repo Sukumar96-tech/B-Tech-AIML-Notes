@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Subject
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+<h1>📚 Add Subject</h1>
+
+</div>
+
+<div class="login-container">
+
+<div class="login-card">
+
+<form method="POST">
+
+<label>
+
+Select Year
+
+</label>
+
+<select name="year_id" required>
+
+{% for year in years %}
+
+<option value="{{year.id}}">
+
+{{year.name}}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+<br><br>
+
+<label>
+
+Subject Name
+
+</label>
+
+<input
+type="text"
+name="name"
+placeholder="Example: DBMS"
+required>
+
+<br><br>
+
+<button type="submit">
+
+Save Subject
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+Admin Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+    <h1>⚙️ Admin Dashboard</h1>
+
+    <p>Manage your AIML Notes Portal</p>
+
+</div>
+
+<div class="year-container">
+
+    <!-- Add Year -->
+    <a href="{{ url_for('add_year') }}" class="year-card">
+        <h2>➕ Add Year</h2>
+    </a>
+
+    <!-- View Years -->
+    <a href="{{ url_for('view_years') }}" class="year-card">
+        <h2>📋 View Years</h2>
+    </a>
+
+    <!-- Add Subject -->
+    <a href="{{ url_for('add_subject') }}" class="year-card">
+        <h2>📚 Add Subject</h2>
+    </a>
+
+    <!-- View Subjects -->
+    <a href="{{ url_for('view_subjects') }}" class="year-card">
+        <h2>📖 View Subjects</h2>
+    </a>
+
+    <!-- Add Note -->
+    <a href="{{ url_for('add_note') }}" class="year-card">
+        <h2>📝 Add Note</h2>
+    </a>
+
+    <!-- View Notes -->
+    <a href="{{ url_for('view_notes') }}" class="year-card">
+        <h2>📄 View Notes</h2>
+    </a>
+
+    <!-- Logout -->
+    <a href="{{ url_for('logout') }}" class="year-card">
+        <h2>🚪 Logout</h2>
+    </a>
+
+</div>
+
+{% endblock %}
+
