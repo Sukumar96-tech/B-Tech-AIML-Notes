@@ -51,7 +51,7 @@ class Note(db.Model):
 
     drive_link = db.Column(db.Text)
 
-    download_link = db.Column(db.Text)
+    
 
     subject_id = db.Column(
         db.Integer,
